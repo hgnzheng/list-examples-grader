@@ -19,12 +19,12 @@ javac ListExamples.java > error-output.txt
 cp -r ../lib lib
 javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 # cd student-submission 
-java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples > output.txt
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples 
 
-if grep -q output.txt; then
-    echo "You got 100%"
-else 
-    echo "FAILURES!!!"
-fi
+# if grep -q output.txt; then
+#     echo "You got 100%"
+# else 
+#     echo "FAILURES!!!"
+# fi
 
-grep "Tests run" output.txt > FAILURES.txt
+# grep "Tests run" output.txt > FAILURES.txt
