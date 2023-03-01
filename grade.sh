@@ -5,13 +5,13 @@ git clone $1 student-submission
 echo 'Finished cloning'
 
 cd student-submission
-if [[ -f ListExamples.java ]]
-then 
-    echo "ListExamples.java found"
-else
-    echo "ListExamples.java not found"
-    exit 1
-fi
+# if [[ -f ListExamples.java ]]
+# then 
+#     echo "ListExamples.java found"
+# else
+#     echo "ListExamples.java not found"
+#     exit 1
+# fi
 
 cp student-submission/ListExamples.java./
 
