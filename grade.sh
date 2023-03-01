@@ -1,4 +1,4 @@
-CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+CPATH='.;lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 
 rm -rf student-submission
 git clone $1 student-submission
@@ -13,14 +13,14 @@ cd student-submission
 #     exit 1
 # fi
 
-cp student-submission/ListExamples.java./
+cp student-submission/ListExamples.java ./
 
-java -cp CPATH *.java
+java -cp $CPATH *.java
 
-java -cp CPATH org.junit.runner.JUnitCore TestListExamples
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples
 
-cp ../TestListExamples.java TestListExamples.java 
-javac ListExamples.java > error-output.txt
+# cp ../TestListExamples.java TestListExamples.java 
+# javac ListExamples.java > error-output.txt
 
 # if grep -q output.txt; then
 #     echo "You got 100%"
